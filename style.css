@@ -586,4 +586,56 @@
         color: var(--ink); border-color: var(--accent); transform: translateY(-1px);
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
       }
+/* ---------- more songs carousel ---------- */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.65s cubic-bezier(0.33, 0.7, 0.3, 1);
+}
+.carousel .slide {
+  flex: 0 0 100%;
+  min-width: 0;
+  padding: 0 2px;
+  box-sizing: border-box;
+}
+.carousel-btn {
+  position: absolute;
+  top: 38%;
+  z-index: 5;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(4, 18, 31, 0.72);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.carousel-btn.prev { left: 8px; }
+.carousel-btn.next { right: 8px; }
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: var(--line);
+  cursor: pointer;
+}
+.carousel-dots button.on {
+  background: var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track { transition: none; }
+}
     
