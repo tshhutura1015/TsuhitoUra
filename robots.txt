@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tshhutura1015.github.io/TsuhitoUra/sitemap.xml
